@@ -1,0 +1,9 @@
+from tensorflow import set_random_seed
+os.environ['PYTHONHASHSEED'] = "0"
+#np.random.seed(1)
+#set_random_seed(2)
+
+import tensorflow
+tf_config = tensorflow.ConfigProto()
+tf_config.gpu_options.allow_growth = True
+session = tensorflow.Session(config=tf_config)
